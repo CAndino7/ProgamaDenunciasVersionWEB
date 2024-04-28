@@ -1,0 +1,35 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expediente Guardado!</title>
+  <style>
+    /* no se utiliza ningun estilo */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Expediente Guardado!</h1>
+    <p>Gracias por guardar un nuevo expediente, el expediente ha sigo guardado con exito.</p>
+    <p>Los valores que se agregaran a la declaracion SQL son:</p>
+    <pre id="sql-declaracion"></pre>
+    <a href="index.html">Regresar a primera pagina ok?</a>
+  </div>
+
+  <script>
+    // Recibe los datos de la pagina anterior donde se ingresan los datos del expediente
+    const parametrosURL = new URLSearchParams(http://localhost/index.com);
+    const ack1 = urlParams.get('ack1');
+    const ack2 = urlParams.get('ack2');
+    const ack3 = urlParams.get('ack3');
+
+    // Muestra la declaracion que se mando al SQL postgres
+    const declaracionSQL = `INSERT INTO Expediente (ack1, ack2, ack3) VALUES ('${ack1}', '${ack2}', '${ack3}');`;
+
+    // Muestra la declaracion que se mando al SQL postgres
+    document.getElementById('sql-declaracion').textContent = declaracionSQL;
+  </script>
+</body>
+</html>
